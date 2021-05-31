@@ -1,9 +1,11 @@
+@charset "UTF-8";
+
 @font-face {
     font-family: 'Chalkduster';
-    src:url('fonts/Chalkduster.ttf.woff') format('woff'),
-        url('fonts/Chalkduster.ttf.svg#Chalkduster') format('svg'),
-        url('fonts/Chalkduster.ttf.eot'),
-        url('fonts/Chalkduster.ttf.eot?#iefix') format('embedded-opentype');
+    src:url('/fonts/Chalkduster.ttf.woff') format('woff'),
+        url('/fonts/Chalkduster.ttf.svg#Chalkduster') format('svg'),
+        url('/fonts/Chalkduster.ttf.eot'),
+        url('/fonts/Chalkduster.ttf.eot?#iefix') format('embedded-opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -83,7 +85,7 @@ body
     width: 100%;
     background-color: #fcfcf2;
 
-    background-image: url('images/logo_red_repeat.svg');
+    background-image: url('/images/logo_red_repeat.svg');
     background-size: 20vh auto;
 }
 
@@ -376,20 +378,49 @@ body
 {
     width: 20%;
     background-color: #ed2024;
+    border-radius: 0;
+    -webkit-appearance: none;
 }
 
-@media (max-aspect-ratio: 4/6) {
+#social
+{
+    text-align: center;
+    position: fixed;
+    bottom: 1vmin;
+    right: 0;
+    width: 10vmin;
+    z-index: 9001;
+}
+
+#social > a
+{
+    color: pink;
+}
+
+#social i
+{
+    font-size: 8vmin;
+}
+
+@media (max-aspect-ratio: 5/6) {
     #page1_text1
     {
-        left: 0;
-        right: 20%;
-        top: 18vh;
+        text-align: center;
+        left: 3%;
+        top: calc(50% - 44vmin);
     }
 
     #page1_text2
     {
-        top: 30vh;
-        right: calc(50% + 10vmin);
+        font-size: 3.5vmin;
+        bottom: calc(50% + 5vmin);
+        right: calc(50% + 8vmin);
+    }
+
+    #page1_arrow
+    {
+        right: calc(50% + 30vmin);
+        top: calc(50% - 32vmin);
     }
 
     #polaroid1
@@ -408,5 +439,22 @@ body
         top: calc(50% + 40vmin);
         transform: rotate(10deg);
         z-index: 100;
+    }
+
+    #page2_text1
+    {
+        width: 100%;
+        top: calc(40% - 35vmin);
+        font-size: 3.5vmin;
+    }
+
+    #groepen
+    {
+        bottom: calc(60% - 35vmin);
+    }
+
+    .text_leeftijd
+    {
+        font-size: 3.5vmin;;
     }
 }
