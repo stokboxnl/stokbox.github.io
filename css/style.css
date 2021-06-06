@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+:root
+{
+    --sb_red:    #ed2024;
+    --sb_green:  #098643;
+    --sb_blue:   #3a53a4;
+    --sb_yellow: #e9ce45;
+    --sb_creme:  #fcfcf2;
+}
+
 @font-face {
     font-family: 'Chalkduster';
     src:url('/fonts/Chalkduster.ttf.woff') format('woff'),
@@ -25,7 +34,21 @@ body
     height: 100vh;
     /* overflow-y: scroll; */
     /* scroll-snap-type: y mandatory; */
-    background-color: rgb(233, 205, 69);
+    background-color: var(--sb_yellow);
+}
+
+#email_form:focus-within
+{
+    border: none;
+    outline: 0.8vmin solid var(--sb_red);
+    box-shadow: none;
+}
+
+#abonneer_email:focus
+{
+    outline: none !important;
+    border: none;
+    box-shadow: none;
 }
 
 .page
@@ -50,7 +73,7 @@ body
 {
     display: block;
     height: 15%;
-    background-color: #fcfcf2;
+    background-color: var(--sb_creme);
 }
 
 #page1_footer
@@ -62,7 +85,7 @@ body
     display: block;
     height: 10%;
     width: 100%;
-    background-color: #fcfcf2;
+    background-color: var(--sb_creme);
     background-image: repeating-linear-gradient(
         to right,
         black 25%,
@@ -83,7 +106,7 @@ body
     display: block;
     height: 30%;
     width: 100%;
-    background-color: #fcfcf2;
+    background-color: var(--sb_creme);
 
     background-image: url('/images/logo_red_repeat.svg');
     background-size: 20vh auto;
@@ -118,7 +141,7 @@ body
     width: 10vmin;
     height: 100%;
     display: block;
-    background-color: #ed2024;
+    background-color: var(--sb_red);
     z-index: 9000;
 }
 
@@ -313,17 +336,17 @@ body
 
 #gieter > .text_leeftijd
 {
-    color: #ed2024;
+    color: var(--sb_red);
 }
 
 #citroen > .text_leeftijd
 {
-    color: #3a53a4;
+    color: var(--sb_blue);
 }
 
 #bril > .text_leeftijd
 {
-    color: #098643;
+    color: var(--sb_green);
 }
 
 #abonneer_text_bg
@@ -333,7 +356,7 @@ body
     width: 100%;
     height: 10%;
     bottom: 0;
-    background-color: #098643;
+    background-color: var(--sb_green);
 }
 
 #abonneer_text
@@ -366,7 +389,7 @@ body
     font-size: 2.4vmin;
     color: #fff;
     height: 10vmin;
-    background-color: rgb(233, 205, 69);
+    background-color: var(--sb_yellow);
     border: none;
 }
 
@@ -378,8 +401,9 @@ body
 
 #abonneer_go
 {
+    cursor:pointer;
     width: 20%;
-    background-color: #ed2024;
+    background-color: var(--sb_red);
     border-radius: 0;
     -webkit-appearance: none;
 }
@@ -400,6 +424,23 @@ body
 #social i
 {
     font-size: 0.8em;
+}
+
+#thank_you_text
+{
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    font-size: 3vmin;
+    margin: auto;
+    width: 70%;
+    max-width: 800px;
+    position: absolute;
+    top: 52.5%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    font-family: 'Montserrat';
 }
 
 @media (max-aspect-ratio: 5/6) {
@@ -472,5 +513,10 @@ body
     #social i
     {
         font-size: 12vmin;
+    }
+
+    #thank_you_text
+    {
+        font-size: 4.5vmin;
     }
 }

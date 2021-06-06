@@ -1,0 +1,4 @@
+Sitemap: http://www.stokbox.nl/sitemap.xml
+
+User-Agent: *
+Host: www.stokbox.nl
