@@ -148,10 +148,10 @@ body
 #logo
 {
     position: relative;
-    height: 60%;
+    height: 40%;
     display: block;
     margin: auto;
-    top: 3vh;
+    top: 5vh;
 }
 
 .polaroid
